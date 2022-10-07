@@ -1,3 +1,3 @@
-# Grupo01
+# Introdução
 
-Guilherme de Avila de Moura, Edelin Chaves dos Santos, Kaua Henrico da Silva Souza, Luan Evander Pimentel Tavares, Andre Luiz Mendes Miranda
+Esse algoritmo em linguagem Java foi desenvolvido para a disciplina de Resolução de Problemas II, do curso de Engenharia de Software da Universidade Federal do Pampa - Campus Alegrete.
