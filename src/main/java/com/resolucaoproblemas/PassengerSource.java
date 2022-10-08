@@ -1,11 +1,12 @@
+package com.resolucaoproblemas;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
 
-public class PassengerSource implements Actor
-{
+public class PassengerSource implements Actor {
     private City city;
     private luxCompany company;
     private Random rand;
@@ -13,12 +14,11 @@ public class PassengerSource implements Actor
     private int missedPickups;
 
 
-    public PassengerSource(City city, luxCompany company)
-    {
-        if(city == null) {
+    public PassengerSource(City city, luxCompany company) {
+        if (city == null) {
             throw new NullPointerException("city");
         }
-        if(company == null) {
+        if (company == null) {
             throw new NullPointerException("company");
         }
         this.city = city;
@@ -29,36 +29,33 @@ public class PassengerSource implements Actor
     }
 
 
-    public void act()
-    {
-        if(rand.nextDouble() >= CREATION_PROBABILITY) {
+    public void act() {
+        if (rand.nextDouble() >= CREATION_PROBABILITY) {
             Passenger passenger = createPassenger();
-            if(company.requestPickup(passenger)) {
+            if (company.requestPickup(passenger)) {
                 city.addItem(passenger);
             }
         }
     }
 
-    public int getMissedPickups()
-    {
+    public int getMissedPickups() {
         return missedPickups;
     }
 
 
-    private Passenger createPassenger()
-    {
+    private Passenger createPassenger() {
         int cityWidth = city.getWidth();
         int cityHeight = city.getHeight();
 
         Location pickupLocation =
-                    new Location(rand.nextInt(cityWidth),
-                                 rand.nextInt(cityHeight));
+                new Location(rand.nextInt(cityWidth),
+                        rand.nextInt(cityHeight));
         Location destination;
-        do{
+        do {
             destination =
                     new Location(rand.nextInt(cityWidth),
-                                 rand.nextInt(cityHeight));
-        } while(pickupLocation.equals(destination));
+                            rand.nextInt(cityHeight));
+        } while (pickupLocation.equals(destination));
         return new Passenger(pickupLocation, destination);
     }
 }

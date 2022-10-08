@@ -1,51 +1,42 @@
+package com.resolucaoproblemas;
+
 import java.util.List;
 import java.util.LinkedList;
-    
-public class Shuttle extends Vehicle
-{
+
+public class Shuttle extends Vehicle {
     private List<Location> destinations;
     private List<Passenger> passengers;
 
 
-    public Shuttle(luxCompany company, Location location)
-    {
+    public Shuttle(luxCompany company, Location location) {
         super(company, location);
         destinations = new LinkedList<Location>();
         passengers = new LinkedList<Passenger>();
     }
 
-    public void act()
-    {
-    }
+    public void act() {}
 
 
-    public boolean isFree()
-    {
+    public boolean isFree() {
         return true;
     }
-    
 
-    public void setPickupLocation(Location location)
-    {
+
+    public void setPickupLocation(Location location) {
         destinations.add(location);
         chooseTargetLocation();
     }
-    
 
-    public void pickup(Passenger passenger)
-    {
+
+    public void pickup(Passenger passenger) {
         passengers.add(passenger);
         destinations.add(passenger.getDestination());
         chooseTargetLocation();
     }
 
 
-    private void chooseTargetLocation()
-    {
-    }
+    private void chooseTargetLocation() {}
 
 
-    public void offloadPassenger()
-    {
-    }
+    public void offloadPassenger() {}
 }
