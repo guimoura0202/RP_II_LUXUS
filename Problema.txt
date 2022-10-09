@@ -1,0 +1,25 @@
+A Computação vem sendo frequentemente utilizada para apoiar os processos internos e melhorar a qualidade das empresas. 
+Nesse sentido, uma empresa de carros de luxo, chamada Luxus, está em processo de expansão de suas atividades. 
+O foco atual da Luxus está na reserva de carros de luxo, mas com a expansão, a empresa visa também focar em ônibus de luxo.
+
+Os carros de luxo são contratados por clientes VIP para fazer o deslocamento de um único cliente VIP 
+(ou uma pequena comitiva de até três clientes VIPs) de um local para outro. A cada viagem,
+ os carros de luxo deixam os clientes VIPs nos locais de destino e finalizam a viagem, antes de iniciar uma nova viagem com novos clientes. 
+Os ônibus de luxo são contratados para buscar passageiros VIPs em diferentes hotéis,
+ na mesma viagem, para levar ao destino final, que pode ser um único local ou vários locais.
+  Por exemplo, os ônibus de luxo são contratados para pegar os clientes em diversos hotéis
+   e levá-los a festas de luxo em locais distantes da cidade. 
+Para fazer a contratação de carros ou ônibus de luxo, um cliente VIP, um hotel de luxo,
+ empresas de negócios de entretenimento ou empresas de turismo entram em contato com a 
+ companhia Luxus para fazer um agendamento. Como a Luxus é uma empresa bastante requisitada na cidade de Alegrete,
+  há casos em que para a data solicitada não haja nenhum carro de luxo disponível, logo,
+   os funcionários da Luxus não estão autorizados a realizar nenhum tipo de reserva aos clientes. 
+Quando um carro de luxo chega no local do cliente VIP, o motorista deve notificar a Luxus que está no local.
+ O mesmo ocorre quando um cliente VIP é deixado em seu destino final, ou seja, o motorista deve notificar a Luxus.
+No último ano, a Luxus obteve um crescimento exponencial. Com isso, a empresa gostaria
+  de saber se uma expansão seria lucrativa. Além disso, a Luxus precisa saber quantos carros de luxo ela necessita adicionar
+   para operar de forma mais eficiente e que atenda todas as necessidades dos clientes.
+
+Desta forma, com base no problema exposto, cada grupo deverá executar um processo de Teste de Software 
+composto por atividades de planejamento, análise, implementação e execução, avaliação de critérios de saída
+ de relatórios e atividades de encerramento de teste.

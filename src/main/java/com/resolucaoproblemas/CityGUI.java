@@ -7,6 +7,9 @@ import java.awt.*;
 import javax.swing.*;
 
 
+/**
+ * The CityGUI class is a JFrame that implements the Actor interface.
+ */
 public class CityGUI extends JFrame implements Actor {
     public static final int CITY_VIEW_WIDTH = 600;
     public static final int CITY_VIEW_HEIGHT = 600;
@@ -14,6 +17,7 @@ public class CityGUI extends JFrame implements Actor {
     private CityView cityView;
 
 
+    // Creating a new CityGUI object.
     public CityGUI(City city) {
         this.city = city;
         cityView = new CityView(city.getWidth(), city.getHeight());
@@ -25,6 +29,9 @@ public class CityGUI extends JFrame implements Actor {
         cityView.repaint();
     }
 
+  /**
+   * The function iterates through all the items in the city and draws them on the screen
+   */
     public void act() {
         cityView.preparePaint();
         Iterator items = city.getItems();
@@ -40,6 +47,9 @@ public class CityGUI extends JFrame implements Actor {
     }
 
 
+    /**
+     * The CityView class is a JPanel that displays the city.
+     */
     private class CityView extends JPanel {
         private final int VIEW_SCALING_FACTOR = 6;
 
@@ -50,6 +60,7 @@ public class CityGUI extends JFrame implements Actor {
         private Image cityImage;
 
 
+        // Setting the background color to white and setting the size to 0,0.
         public CityView(int width, int height) {
             cityWidth = width;
             cityHeight = height;
@@ -58,12 +69,18 @@ public class CityGUI extends JFrame implements Actor {
         }
 
 
+       /**
+        * It returns the preferred size of the component.
+        * 
+        * @return The preferred size of the panel.
+        */
         public Dimension getPreferredSize() {
             return new Dimension(cityWidth * VIEW_SCALING_FACTOR,
                     cityHeight * VIEW_SCALING_FACTOR);
         }
 
 
+        // Setting the size of the city.
         public void preparePaint() {
             if (!size.equals(getSize())) { // if the size has changed...
                 size = getSize();
@@ -79,6 +96,7 @@ public class CityGUI extends JFrame implements Actor {
                     yScale = VIEW_SCALING_FACTOR;
                 }
             }
+          // Drawing the grid.
             g.setColor(Color.white);
             g.fillRect(0, 0, size.width, size.height);
             g.setColor(Color.gray);
@@ -91,6 +109,14 @@ public class CityGUI extends JFrame implements Actor {
         }
 
 
+      /**
+       * It draws an image at the specified location.
+       * 
+       * @param x The x coordinate of the top left corner of the rectangle to be drawn.
+       * @param y The y coordinate of the top left corner of the rectangle to be drawn.
+       * @param image The image to be drawn.
+       */
+      // Drawing the image.
         public void drawImage(int x, int y, Image image) {
             g.drawImage(image, x * xScale + 1, y * yScale + 1,
                     xScale - 1, yScale - 1, this);
@@ -108,5 +134,16 @@ public class CityGUI extends JFrame implements Actor {
                 }
             }
         }
+    }
+
+
+    public void setActive(boolean active) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    public void reset() {
+        // TODO Auto-generated method stub
+        
     }
 }
